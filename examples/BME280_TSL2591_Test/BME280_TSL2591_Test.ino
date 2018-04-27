@@ -3,6 +3,8 @@
   Example for the BME280+TSL2591 Advanced Weather Station
   written by Thiago Barros for BlueDot UG (haftungsbeschränkt)
   BSD License
+  
+  Version 1.0.4 (2018-04-27)
 
   This sketch was written for the Bosch Sensor BME280 and the AMS Sensor TSL2591.
   The BME280 is a MEMS device for measuring temperature, humidity and atmospheric pressure, while the TSL2591 is a light sensor.
@@ -12,7 +14,6 @@
 
 
 #include <Wire.h>
-#include <avr/wdt.h>
 #include "BlueDot_BME280_TSL2591.h"
 BlueDot_BME280_TSL2591 bme280;
 BlueDot_BME280_TSL2591 tsl2591;
