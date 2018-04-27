@@ -14,6 +14,7 @@ This library allows the user to program and simultaneously read the outputs of t
 ## **Version History**
 
 * V1.0.3 - Public Release Version
+* V1.0.4 - Example sketch adapted for NodeMCU boards
 
 
 
