@@ -23,10 +23,27 @@ void setup() {
   Serial.begin(9600);
   Serial.println(F("Basic Weather Station"));
 
-  Wire.begin();
+ 
   bme280.parameter.I2CAddress = 0x77;                 //The BME280 is hardwired to use the I2C Address 0x77              
   tsl2591.parameter.I2CAddress = 0x29;   
 
+  //*********************************************************************
+  //*************BASIC SETUP - READ BEFORE GOING ON!*********************
+    
+  //Choose between Arduino Boards and the NodeMCU board (ESP8266)
+  //Arduino boards have predefined SDA and SCL pins for the I2C communication
+  //For NodeMCU boards we need to assign two pins for the SDA and SCL lines
+  //The Wire.begin() function allows you to define which pins you want for the I2C mode
+  //It works like this: Wire.begin([SDA],[SCL])
+    
+   Wire.begin();                          //Use this function for Arduino boards                                                                   
+ 
+  //Wire.begin(0,2);                      //Use this for NodeMCU boards
+                                          //For the NodeMCU V3 board: 
+                                          //GPIO0 = Pin D3 = SDA
+                                          //GPIO2 = Pin D4 = SCL
+  
+                                          
      
   //*********************************************************************
   //*************ADVANCED SETUP - SAFE TO IGNORE!************************        
